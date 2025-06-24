@@ -1,0 +1,184 @@
+/* Reset and base styles */
+body {
+  margin: 0;
+  font-family: 'Segoe UI', sans-serif;
+  background: linear-gradient(135deg, #2c3e50, #3498db);
+  color: #fff;
+}
+
+/* Wrapper layout */
+.mainDiv {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+/* Glass panel container */
+.inputDiv {
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  padding: 40px 30px;
+  border-radius: 20px;
+  width: 100%;
+  max-width: 420px;
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.25);
+  backdrop-filter: blur(10px);
+  animation: fadeIn 0.5s ease-in-out;
+  text-align: center;
+}
+
+/* Heading style */
+.inputDiv h1,
+.inputDiv h2 {
+  font-size: 24px;
+  margin-bottom: 30px;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+}
+
+/* Logo */
+.inputDiv img {
+  width: 40px;
+  margin-right: 12px;
+}
+
+/* Form elements */
+.inputDiv input,
+.inputDiv select {
+  width: 100%;
+  padding: 12px 16px;
+  margin-bottom: 18px;
+  border-radius: 10px;
+  border: none;
+  background: rgba(255, 255, 255, 0.9);
+  color: #333;
+  font-size: 15px;
+  box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.08);
+  transition: box-shadow 0.3s ease;
+}
+
+.inputDiv input:focus,
+.inputDiv select:focus {
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(0, 206, 201, 0.35);
+}
+
+/* Button group layout */
+.buttons {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+/* Buttons */
+.button-31,
+button {
+  flex: 1;
+  padding: 10px 16px;
+  background-color: #00cec9;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-weight: 600;
+  cursor: pointer;
+  font-size: 16px;
+  text-align: center;
+  transition: background-color 0.2s ease, transform 0.2s ease;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+}
+
+.button-31:hover,
+button:hover {
+  background-color: #00b894;
+  transform: translateY(-1px);
+}
+
+button:disabled,
+.button-31:disabled {
+  background-color: #bdc3c7;
+  color: #ffffffd1;
+  cursor: not-allowed;
+  box-shadow: none;
+  transform: none;
+}
+
+/* Bookings section */
+.booked {
+  background-color: rgba(255, 255, 255, 0.1);
+  padding: 30px;
+  border-radius: 15px;
+  max-width: 500px;
+  width: 100%;
+  text-align: center;
+}
+
+.bookings {
+  background: rgba(255, 255, 255, 0.15);
+  margin: 15px 0;
+  padding: 15px;
+  border-radius: 10px;
+  color: #fff;
+  font-weight: 500;
+}
+
+/* Route image container */
+.routeView {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.95);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+  padding: 20px;
+}
+
+.routeView img.route-image {
+  max-width: 90%;
+  max-height: 70vh;
+  border-radius: 10px;
+  box-shadow: 0 5px 15px rgba(255, 255, 255, 0.1);
+}
+
+.routeView button {
+  margin-top: 20px;
+  padding: 10px 16px;
+  font-size: 15px;
+  background-color: #00cec9;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-weight: 600;
+  cursor: pointer;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  transition: background-color 0.2s ease;
+  max-width: 200px;
+  max-height: 40px;
+}
+.routeView button:hover {
+  background-color: #00b894;
+}
+
+/* Fade in animation */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(12px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
